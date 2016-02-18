@@ -1,0 +1,136 @@
+<head>
+<style type="text/css">
+body {
+	font-family: Arial, Sans-serif;
+	font-size: 0.8em;
+}
+
+.error {
+	font-family: verdana, Helvetica;
+}
+
+.groupwrap {
+	display: inline-block;
+}
+</style>
+<script type="text/javascript">
+	$(function() {
+		//Initialize the tooltips
+		$('#signupform :input').each(function() {
+			var tipelement = getTipContainer(this);
+
+			$(tipelement).tooltipster({
+				trigger : 'custom',
+				onlyOne : false,
+				position : 'right',
+				multiple : false,
+				autoClose : false
+			});
+
+		});
+
+		//Setup the validator
+		$('#signupform')
+				.validate(
+						{
+							rules : {
+								fullname : {
+									required : true
+								},
+								email : {
+									required : true,
+									email : true
+								},
+								color : {
+									required : true
+								},
+								'features[]' : {
+									required : true,
+									minlength : 2
+								}
+							},
+							messages : {
+								'features[]' : {
+									required : "Please select features",
+									minlength : "Please select at least {0} features"
+								}
+							},
+							errorPlacement : function(error, element) {
+								var $element = $(element), tipelement = element, errtxt = $(
+										error).text(), last_error = '';
+
+								tipelement = getTipContainer(element);
+
+								last_error = $(tipelement).data('last_error');
+								$(tipelement).data('last_error', errtxt);
+								if (errtxt !== '' && errtxt != last_error) {
+									$(tipelement)
+											.tooltipster('content', errtxt);
+									$(tipelement).tooltipster('show');
+								}
+							},
+							success : function(label, element) {
+								var tipelement = getTipContainer(element);
+								$(tipelement).tooltipster('hide');
+							}
+						});
+
+		//this function selects a container for 'group' elements like 
+		//check box /radio groups
+		function getTipContainer(element) {
+			var tipelement = element;
+			if ($(element).is(":checkbox") || $(element).is(":radio")) {
+				tipelement = $(element).parents('.container').get(0);
+			}
+			return tipelement;
+		}
+	});
+</script>
+<script type="text/javascript">
+	
+</script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script
+    src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCJnj2nWoM86eU8Bq2G4lSNz3udIkZT4YY&sensor=false">
+</script>
+
+<script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+
+<script type="text/javascript" src="js/jquery.tooltipster.min.js"></script>
+
+</head>
+
+<h2>Widget Order form</h2>
+<form id="signupform" method="get" action="">
+	<p>
+		<label for='fullname'>Your Name:</label> <input type='text'
+			name='fullname' />
+	</p>
+	<p>
+		<label for='email'>Your Email:</label> <input type='text' name='email' />
+	</p>
+	<p>
+		<label for='color'>Widget Color:</label>
+	<div class='groupwrap container'>
+		<label><input type='radio' name='color' value='green' />Green</label>
+		<label><input type='radio' name='color' value='blue' />Blue</label> <label><input
+			type='radio' name='color' value='yellow' />Yellow</label>
+	</div>
+	</p>
+	<p>
+		<label for='features'>Widget Features:</label>
+	<div class='groupwrap container'>
+		<label><input type='checkbox' name='features[]' value='green' />Tweets</label>
+		<label><input type='checkbox' name='features[]' value='barks' />Barks</label>
+		<label><input type='checkbox' name='features[]' value='jumps' />Jumps</label>
+		<label><input type='checkbox' name='features[]' value='yawns' />Yawns</label>
+	</div>
+	</p>
+	<p>
+		<input type='submit' name='submit' value='Submit' />
+	</p>
+</form>
+
