@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd ">
+
+	<!-- Enables the Spring MVC @Controller programming model -->
+	<annotation-driven />
+	
+	<context:component-scan base-package="in.com.spring.controller" />
+	
+	<resources mapping="/resources/**" location="/resources/" ></resources>
+
+	 <beans:bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+  		<beans:property name="basename" value="classpath:messages" />
+  		<beans:property name="defaultEncoding" value="UTF-8" />
+ 	</beans:bean>
+
+ 	<interceptors>
+  		<beans:bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+   			<beans:property name="paramName" value="lang" />
+  		</beans:bean>
+ 	</interceptors>
+		 
+		 <!-- Configure the multipart resolver -->
+    <beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!-- one of the properties available; the maximum file size in bytes -->
+        <beans:property name="maxUploadSize" value="10000000"/>
+    </beans:bean>
+
+ 	<beans:bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
+  		<beans:property name="defaultLocale" value="en" />
+ 	</beans:bean>
+
+
+	<!-- Register the welcome.properties -->
+	
+	<beans:bean id="viewResolver"
+    	class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+    	<beans:property name="viewClass">
+	        <beans:value>
+	            org.springframework.web.servlet.view.tiles2.TilesView
+	        </beans:value>
+	    </beans:property>
+	</beans:bean>
+	<beans:bean id="tilesConfigurer"
+	    class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
+	    <beans:property name="definitions">
+	        <beans:list>
+	            <beans:value>/WEB-INF/tiles.xml</beans:value>
+	        </beans:list>
+	    </beans:property>
+	</beans:bean>
+	
+	<!-- This is Database Configuration -->
+	<beans:bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<beans:property name="driverClassName">
+			<beans:value>com.mysql.jdbc.Driver</beans:value>
+		</beans:property>
+		<beans:property name="url">
+			<beans:value>jdbc:mysql://localhost:3306/jtd_db1</beans:value>
+		</beans:property>
+		<beans:property name="username">
+			<beans:value>root</beans:value>
+		</beans:property>
+		<beans:property name="password">
+			<beans:value>root</beans:value>
+		</beans:property>
+	</beans:bean>
+
+		
+	
+	
+	 <beans:bean id="hibernateSessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<beans:property name="dataSource" ref="dataSource" />
+		<beans:property name="annotatedClasses">
+			<beans:list>
+				 <beans:value>in.com.spring.beans.Role</beans:value>
+				 <beans:value>in.com.spring.beans.User</beans:value>
+			</beans:list>
+		</beans:property>
+		<beans:property name="hibernateProperties">
+			<beans:props>
+				<beans:prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect
+				</beans:prop>
+				<beans:prop key="hibernate.show_sql">true</beans:prop>
+				<beans:prop key="hibernate.hbm2ddl.auto">update</beans:prop>
+			</beans:props>
+		</beans:property>
+	</beans:bean> 
+	
+	
+	   
+   
+	<beans:bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<beans:property name="sessionFactory" ref="hibernateSessionFactory"/>
+	</beans:bean>
+
+
+</beans:beans>

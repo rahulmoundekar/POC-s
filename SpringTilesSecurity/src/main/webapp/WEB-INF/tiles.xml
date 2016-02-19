@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+
+	<!--base.definition -->
+
+	<definition name="base.definition" template="/WEB-INF/jsp/common_webpages/template.jsp">
+		<put-attribute name="title" value="Welcome To CRM" />
+		<put-attribute name="header" value="" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer"
+			value="/WEB-INF/jsp/common_webpages/footer.jsp" />
+	</definition>
+
+	<definition name="globalbase.definition" extends="base.definition">
+		<put-attribute name="title" value="Welcome To CRM" />
+		<put-attribute name="header"
+			value="/WEB-INF/jsp/common_webpages/header.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+	<definition name="adminbase.definition" extends="base.definition">
+		<put-attribute name="title" value="Welcome To CRM" />
+		<put-attribute name="header"
+			value="/WEB-INF/jsp/common_webpages/admin_header.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+	<definition name="servicebase.definition" extends="base.definition">
+		<put-attribute name="title" value="Welcome To CRM" />
+		<put-attribute name="header"
+			value="/WEB-INF/jsp/common_webpages/service_header.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	<definition name="visitorbase.definition" extends="base.definition">
+		<put-attribute name="title" value="Welcome To CRM" />
+		<put-attribute name="header"
+			value="/WEB-INF/jsp/common_webpages/visitor_header.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	<!--END -->
+
+
+	<definition name="global_login.def" extends="globalbase.definition">
+		<put-attribute name="title" value="Login To CRM" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/common_webpages/login.jsp" />
+	</definition>
+	<definition name="global_contact.def" extends="globalbase.definition">
+		<put-attribute name="title" value="Login To CRM" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/common_webpages/contact-us.jsp" />
+	</definition>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<definition name="globalHome" extends="globalbase.definition">
+		<put-attribute name="title" value="Welcome To CRM" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/common_webpages/welcome.jsp" />
+	</definition>
+
+	<definition name="AdminHome" extends="adminbase.definition">
+		<put-attribute name="title" value="Welcome To CRM" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/common_webpages/welcome.jsp" />
+	</definition>
+
+	<definition name="VisitorHome" extends="visitorbase.definition">
+		<put-attribute name="title" value="Welcome To CRM" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/common_webpages/welcome.jsp" />
+	</definition>
+
+	<definition name="ServicerHome" extends="servicebase.definition">
+		<put-attribute name="title" value="Welcome To Service" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/common_webpages/welcome.jsp" />
+	</definition>
+
+
+
+
+</tiles-definitions>
