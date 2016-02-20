@@ -1,15 +1,15 @@
 package in.com.spring.controller;
 
 import org.springframework.stereotype.Controller;
-
 import in.com.spring.beans.User;
-
 import java.util.Collection;
-
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -50,7 +50,6 @@ public class LoginController {
 
 	@RequestMapping(value = "/login/loginFailed", method = RequestMethod.GET)
 	public ModelAndView loginFailed(Model map, HttpSession session) {
-		System.out.println("Session : "+session);
 		return new ModelAndView("global_login.def", "user", new User());
 	}
 
@@ -59,6 +58,21 @@ public class LoginController {
 		req.getSession().invalidate();
 		SecurityContextHolder.clearContext();
 		return new ModelAndView("global_login.def", "user", new User());
+	}
+	
+	@RequestMapping(value = "/403", method = RequestMethod.GET)
+	public ModelAndView accesssDenied() {
+		ModelAndView model = new ModelAndView();
+		// check if user is login
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		if (!(auth instanceof AnonymousAuthenticationToken)) {
+			UserDetails userDetail = (UserDetails) auth.getPrincipal();
+			System.out.println(userDetail);
+			model.addObject("username", userDetail.getUsername());
+		}
+		model.setViewName("403");
+		return model;
+
 	}
 
 }

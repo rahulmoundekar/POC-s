@@ -8,16 +8,15 @@
 	<http auto-config="true" disable-url-rewriting="false"
 		use-expressions="true">
 		<headers disabled="true" />
-		<intercept-url pattern="/login/**" access="permitAll" />
+		<access-denied-handler error-page="/403"/>
 		<intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')" />
 		<intercept-url pattern="/servicer/**" access="hasRole('ROLE_SERVICER')" />
 		<intercept-url pattern="/visitor/**" access="hasRole('ROLE_VISITOR')"/>
-		<form-login 
+		<form-login login-page="/login/loginPage"
 			default-target-url="/login/loginPass" 
 			login-processing-url="/j_spring_security_check"
 			username-parameter="j_username" 
 			password-parameter="j_password"
-			always-use-default-target="true" 
 			authentication-failure-url="/login/loginFailed" />
 		<logout logout-url="/login/logout" 
 				invalidate-session="true"

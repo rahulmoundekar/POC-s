@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <header id="header"><!--header-->
 		<div class="header_top"><!--header_top-->
 			<div class="container">
@@ -7,7 +8,11 @@
 							<ul class="nav nav-pills">
 								<li><a href="#"><i class="fa fa-phone"></i> +91 95 01 88 8211</a></li>
 								<li><a href="#"><i class="fa fa-envelope"></i> info@domain.com</a></li>
-								<li><a href="#"><i class="fa fa-user"></i> Welcome |</a></li>
+								<li>
+								<c:if test="${pageContext.request.userPrincipal.name != null}">
+									<a href="#"><i class="fa fa-user"></i> Welcome | ${pageContext.request.userPrincipal.name}</a>
+								</c:if>	
+								</li>
 							</ul>
 						</div>
 					</div>

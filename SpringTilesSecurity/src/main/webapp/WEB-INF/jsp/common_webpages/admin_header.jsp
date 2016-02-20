@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <header id="header">
 	<!--header-->
 	<div class="header_top">
@@ -11,7 +12,11 @@
 									8211</a></li>
 							<li><a href="#"><i class="fa fa-envelope"></i>
 									info@domain.com</a></li>
-							<li><a href="#"><i class="fa fa-envelope"></i> Welcome |</a></li>
+							<li><c:if
+									test="${pageContext.request.userPrincipal.name != null}">
+									<a href="#"><i class="fa fa-user"></i> Welcome |
+										${pageContext.request.userPrincipal.name}</a>
+								</c:if></li>
 						</ul>
 					</div>
 				</div>
@@ -38,7 +43,8 @@
 				<div class="col-sm-4">
 					<div class="logo pull-left">
 						<a href="index.html"><img
-							src="${pageContext.request.contextPath}/resources/crm_assets/images/home/hh.png" alt="" /></a>
+							src="${pageContext.request.contextPath}/resources/crm_assets/images/home/hh.png"
+							alt="" /></a>
 					</div>
 					<div class="btn-group pull-right">
 						<div class="btn-group">
@@ -81,7 +87,8 @@
 									</ul>
 								</div>
 							</div>
-							<li><a href="#" id="logot"><i class="fa fa-lock"></i>Sign Out</a></li>
+							<li><a href="#" id="logot"><i class="fa fa-lock"></i>Sign
+									Out</a></li>
 						</ul>
 					</div>
 				</div>
