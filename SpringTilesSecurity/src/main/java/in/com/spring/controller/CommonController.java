@@ -19,4 +19,13 @@ public class CommonController {
 	public ModelAndView LoginJsp() {
 		return new ModelAndView("global_login.def", "user", new User());
 	}
+	
+	@RequestMapping(value = "/servicer/ServicerHome", method = RequestMethod.GET)
+	public ModelAndView welcomeVisitor() {
+		return new ModelAndView("ServicerHome");
+	}
+	@RequestMapping(value = "/visitor/VisitorHome", method = RequestMethod.GET)
+	public ModelAndView welcomeServicer() {
+		return new ModelAndView("VisitorHome");
+	}
 }

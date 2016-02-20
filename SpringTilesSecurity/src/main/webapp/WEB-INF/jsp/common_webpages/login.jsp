@@ -9,17 +9,15 @@
 				<div class="login-form">
 					<h2>Login to your account</h2>
 					<h5 style="color: red;">${sessionScope["SPRING_SECURITY_LAST_EXCEPTION"].message}</h5>
-					<form:form action="${pageContext.request.contextPath}/j_spring_security_check" method='POST'
-						name='loginForm' id="loginForm" modelAttribute="user">
-						<form:input type="text" path="userName" id="j_username"
-							name="j_username" placeholder="User Name" />
-						<form:input type="password" path="password" id="j_password"
-							name="j_password" placeholder="Password" />
-						<span> <input type="checkbox" class="checkbox">
-							Keep me signed in
-						</span>
-						<input type="submit" value="Sign In" class="btn btn-default">
-						<!-- <button type="submit" class="btn btn-default">Login</button> -->
+					<form:form
+						action="${pageContext.request.contextPath}/j_spring_security_check"
+						method='POST' name='loginForm' id="loginForm"
+						modelAttribute="user">
+						<input id="j_username" name="j_username" type="text"
+							placeholder="Username">
+						<input id="j_password" name="j_password" type="password"
+							placeholder="Password">
+						<button type="submit" class="btn btn-default">Login</button>
 					</form:form>
 				</div>
 				<!--/login form-->

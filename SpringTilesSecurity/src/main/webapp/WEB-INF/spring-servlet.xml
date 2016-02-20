@@ -34,7 +34,6 @@
   		<beans:property name="defaultLocale" value="en" />
  	</beans:bean>
 
-
 	<!-- Register the welcome.properties -->
 	
 	<beans:bean id="viewResolver"
@@ -71,9 +70,6 @@
 		</beans:property>
 	</beans:bean>
 
-		
-	
-	
 	 <beans:bean id="hibernateSessionFactory"
 		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
 		<beans:property name="dataSource" ref="dataSource" />
@@ -93,12 +89,8 @@
 		</beans:property>
 	</beans:bean> 
 	
-	
-	   
-   
 	<beans:bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
 		<beans:property name="sessionFactory" ref="hibernateSessionFactory"/>
 	</beans:bean>
-
 
 </beans:beans>

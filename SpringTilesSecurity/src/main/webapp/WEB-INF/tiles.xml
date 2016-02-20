@@ -54,31 +54,6 @@
 			value="/WEB-INF/jsp/common_webpages/contact-us.jsp" />
 	</definition>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	<definition name="globalHome" extends="globalbase.definition">
 		<put-attribute name="title" value="Welcome To CRM" />
 		<put-attribute name="body"
@@ -102,8 +77,5 @@
 		<put-attribute name="body"
 			value="/WEB-INF/jsp/common_webpages/welcome.jsp" />
 	</definition>
-
-
-
 
 </tiles-definitions>
