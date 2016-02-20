@@ -35,7 +35,7 @@
 		$('#ll').hide();
 		$('#logot').click(function() {
 			var tx = $('#ll').text();
-			url = "logout.htm?textvalue=" + tx;
+			url = "${pageContext.request.contextPath}/login/logout?textvalue=" + tx;
 			document.location.href = url;
 		});
 

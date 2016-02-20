@@ -56,7 +56,7 @@
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-							<li><a href="#" id="logot"><i class="fa fa-lock"></i> signout</a></li> 
+							<li><a href="#" id="logot"><i class="fa fa-lock"></i> Sign Out</a></li> 
 								<div class="btn-group pull-right">
 									<div class="btn-group">
 										<button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">

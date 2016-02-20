@@ -7,6 +7,28 @@
 		<div class="row">
 			<div class="col-sm-4 col-sm-offset-1">
 				<div class="login-form">
+					<%
+						String s = request.getParameter("textvalue");
+						
+						if (s != null) {
+					%>
+					<div id="lg" style="color: blue">
+						<div class="status alert alert-success"><%=s%></div>
+					</div>
+					<%
+						}
+					%>
+					<%
+						String s1 = request.getParameter("massage");
+						
+						if (s1 != null) {
+					%>
+					<div id="delete" style="color: blue">
+						<div class="status alert alert-success"><%=s1%></div>
+					</div>
+					<%
+						}
+					%>
 					<h2>Login to your account</h2>
 					<h5 style="color: red;">${sessionScope["SPRING_SECURITY_LAST_EXCEPTION"].message}</h5>
 					<form:form

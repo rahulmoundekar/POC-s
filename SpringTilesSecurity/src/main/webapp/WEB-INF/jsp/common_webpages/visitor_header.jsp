@@ -98,7 +98,7 @@
 								<li><a href="vwishlist.htm"><i class="fa fa-star"></i> Wishlist</a></li>
 								<li><a href="vcheckout.htm"><i class="fa fa-crosshairs"></i> Checkout</a></li>
 								<li><a href="vcart.htm"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-								<li><a href="#" id="logot"><i class="fa fa-lock"></i> signout</a></li> 
+								<li><a href="#" id="logot"><i class="fa fa-lock"></i> Sign Out</a></li> 
 								<div class="btn-group pull-right">
 									<div class="btn-group">
 										<button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">

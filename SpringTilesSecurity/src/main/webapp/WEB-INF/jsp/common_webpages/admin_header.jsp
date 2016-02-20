@@ -81,8 +81,7 @@
 									</ul>
 								</div>
 							</div>
-							<li><a href="logout.htm"><i class="fa fa-lock"></i>
-									signout</a></li>
+							<li><a href="#" id="logot"><i class="fa fa-lock"></i>Sign Out</a></li>
 						</ul>
 					</div>
 				</div>
