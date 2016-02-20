@@ -4,28 +4,28 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <title>Home | CRM</title>
-<link href="${pageContext.request.contextPath}/crm_assets/css/bootstrap.min.css" rel="stylesheet">
-<link href="${pageContext.request.contextPath}/crm_assets/css/font-awesome.min.css" rel="stylesheet">
-<link href="${pageContext.request.contextPath}/crm_assets/css/prettyPhoto.css" rel="stylesheet">
-<link href="${pageContext.request.contextPath}/crm_assets/css/price-range.css" rel="stylesheet">
-<link href="${pageContext.request.contextPath}/crm_assets/css/animate.css" rel="stylesheet">
-<link href="${pageContext.request.contextPath}/crm_assets/css/main.css" rel="stylesheet">
-<link href="${pageContext.request.contextPath}/crm_assets/css/responsive.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/resources/crm_assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/resources/crm_assets/css/font-awesome.min.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/resources/crm_assets/css/prettyPhoto.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/resources/crm_assets/css/price-range.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/resources/crm_assets/css/animate.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/resources/crm_assets/css/main.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/resources/crm_assets/css/responsive.css" rel="stylesheet">
 <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->
-<link rel="shortcut icon" href="${pageContext.request.contextPath}/images/ico/favicon.ico">
+<link rel="shortcut icon" href="${pageContext.request.contextPath}/resources/crm_assets/images/ico/favicon.ico">
 <link rel="apple-touch-icon-precomposed" sizes="144x144"
-	href="${pageContext.request.contextPath}/crm_assets/images/ico/apple-touch-icon-144-precomposed.png">
+	href="${pageContext.request.contextPath}/resources/crm_assets/images/ico/apple-touch-icon-144-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="114x114"
-	href="${pageContext.request.contextPath}/crm_assets/images/ico/apple-touch-icon-114-precomposed.png">
+	href="${pageContext.request.contextPath}/resources/crm_assets/images/ico/apple-touch-icon-114-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="72x72"
-	href="${pageContext.request.contextPath}/crm_assets/images/ico/apple-touch-icon-72-precomposed.png">
+	href="${pageContext.request.contextPath}/resources/crm_assets/images/ico/apple-touch-icon-72-precomposed.png">
 <link rel="apple-touch-icon-precomposed"
-	href="${pageContext.request.contextPath}/crm_assets/images/ico/apple-touch-icon-57-precomposed.png">
+	href="${pageContext.request.contextPath}/resources/crm_assets/images/ico/apple-touch-icon-57-precomposed.png">
 <link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/crm_assets/css/jquery.dataTables.css">
+	href="${pageContext.request.contextPath}/resources/crm_assets/css/jquery.dataTables.css">
 
 <link rel="stylesheet"
 	href="//code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
@@ -99,7 +99,7 @@
 						<div class="video-gallery text-center">
 							<a href="#">
 								<div class="iframe-img">
-									<img src="${pageContext.request.contextPath}/crm_assets/images/home/iframe3.png" alt="" />
+									<img src="${pageContext.request.contextPath}/resources/crm_assets/images/home/iframe3.png" alt="" />
 								</div>
 								<div class="overlay-icon">
 									<i class="fa fa-play-circle-o"></i>
@@ -114,7 +114,7 @@
 						<div class="video-gallery text-center">
 							<a href="#">
 								<div class="iframe-img">
-									<img src="${pageContext.request.contextPath}/crm_assets/images/home/iframe4.png" alt="" />
+									<img src="${pageContext.request.contextPath}/resources/crm_assets/images/home/iframe4.png" alt="" />
 								</div>
 								<div class="overlay-icon">
 									<i class="fa fa-play-circle-o"></i>
@@ -127,7 +127,7 @@
 				</div>
 				<div class="col-sm-3">
 					<div class="address">
-						<img src="${pageContext.request.contextPath}/crm_assets/images/home/map.png" alt="" />
+						<img src="${pageContext.request.contextPath}/resources/crm_assets/images/home/map.png" alt="" />
 						<p>EI-T Karvenagar, IN(India)</p>
 					</div>
 				</div>
@@ -224,11 +224,11 @@
 		$("#example").dataTable();
 	})
 </script>
-<script src="${pageContext.request.contextPath}/crm_assets/js/jquery-1.10.2.min.map"></script>
-<script src="${pageContext.request.contextPath}/crm_assets/js/moment+langs.min.js"></script>
-<script src="${pageContext.request.contextPath}/crm_assets/js/password-strengthChecker.js"></script>
-<script src="${pageContext.request.contextPath}/crm_assets/js/bootstrap.min.js"></script>
-<script src="${pageContext.request.contextPath}/crm_assets/js/jquery.scrollUp.min.js"></script>
-<script src="${pageContext.request.contextPath}/crm_assets/js/price-range.js"></script>
-<script src="${pageContext.request.contextPath}/crm_assets/js/jquery.prettyPhoto.js"></script>
-<script src="${pageContext.request.contextPath}/crm_assets/js/main.js"></script>
+<script src="${pageContext.request.contextPath}/resources/crm_assets/js/jquery-1.10.2.min.map"></script>
+<script src="${pageContext.request.contextPath}/resources/crm_assets/js/moment+langs.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/crm_assets/js/password-strengthChecker.js"></script>
+<script src="${pageContext.request.contextPath}/resources/crm_assets/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/crm_assets/js/jquery.scrollUp.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/crm_assets/js/price-range.js"></script>
+<script src="${pageContext.request.contextPath}/resources/crm_assets/js/jquery.prettyPhoto.js"></script>
+<script src="${pageContext.request.contextPath}/resources/crm_assets/js/main.js"></script>

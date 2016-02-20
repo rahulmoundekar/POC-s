@@ -28,4 +28,10 @@ public class CommonController {
 	public ModelAndView welcomeServicer() {
 		return new ModelAndView("VisitorHome");
 	}
+	
+	@RequestMapping(value = "/admin/AdminHome", method = RequestMethod.GET)
+	public ModelAndView welcomeAdmin() {
+		return new ModelAndView("AdminHome");
+	}
+	
 }

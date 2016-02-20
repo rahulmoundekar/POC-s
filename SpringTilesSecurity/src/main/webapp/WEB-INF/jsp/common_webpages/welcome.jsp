@@ -27,7 +27,7 @@
 									else you do, can be challenging</p>
 							</div>
 							<div class="col-sm-6">
-								<img src="${pageContext.request.contextPath}/crm_assets/images/services/Cleaning-supplies.jpg"
+								<img src="${pageContext.request.contextPath}/resources/crm_assets/images/services/Cleaning-supplies.jpg"
 									class="girl img-responsive" alt="" />
 							</div>
 						</div>
@@ -40,7 +40,7 @@
 								<p>Cook it with care, well done not rare.</p>
 							</div>
 							<div class="col-sm-6">
-								<img src="${pageContext.request.contextPath}/crm_assets/images/services/cooking.jpg"
+								<img src="${pageContext.request.contextPath}/resources/crm_assets/images/services/cooking.jpg"
 									class="girl img-responsive" alt="" />
 
 							</div>
@@ -55,7 +55,7 @@
 								<p></p>
 							</div>
 							<div class="col-sm-6">
-								<img src="${pageContext.request.contextPath}/crm_assets/images/services/home.jpg"
+								<img src="${pageContext.request.contextPath}/resources/crm_assets/images/services/home.jpg"
 									class="girl img-responsive" alt="" />
 							</div>
 						</div>
@@ -68,7 +68,7 @@
 								<p>Looking to Hire a Reliable Plumber in Your Area?</p>
 							</div>
 							<div class="col-sm-6">
-								<img src="${pageContext.request.contextPath}/crm_assets/images/services/p.jpg"
+								<img src="${pageContext.request.contextPath}/resources/crm_assets/images/services/p.jpg"
 									class="girl img-responsive" alt="" />
 							</div>
 						</div>
@@ -81,7 +81,7 @@
 								<p>swimming</p>
 							</div>
 							<div class="col-sm-6">
-								<img src="${pageContext.request.contextPath}/crm_assets/images/services/swimming.jpg"
+								<img src="${pageContext.request.contextPath}/resources/crm_assets/images/services/swimming.jpg"
 									class="girl img-responsive" alt="" />
 							</div>
 						</div>
@@ -94,7 +94,7 @@
 								<p>Music And Voice Lession</p>
 							</div>
 							<div class="col-sm-6">
-								<img src="${pageContext.request.contextPath}/crm_assets/images/services/music.jpeg"
+								<img src="${pageContext.request.contextPath}/resources/crm_assets/images/services/music.jpeg"
 									class="girl img-responsive" alt="" />
 							</div>
 						</div>
@@ -107,7 +107,7 @@
 								<p>Our Professionals Repair With Care</p>
 							</div>
 							<div class="col-sm-6">
-								<img src="${pageContext.request.contextPath}/crm_assets/images/services/electrical4.jpg"
+								<img src="${pageContext.request.contextPath}/resources/crm_assets/images/services/electrical4.jpg"
 									class="girl img-responsive" alt="" />
 							</div>
 						</div>
@@ -137,7 +137,7 @@
 						<div class="product-image-wrapper">
 							<div class="single-products">
 								<div class="productinfo text-center">
-									<img src="${pageContext.request.contextPath}/crm_assets/images/home/product1.jpg" alt="" />
+									<img src="${pageContext.request.contextPath}/resources/crm_assets/images/home/product1.jpg" alt="" />
 									<h2>5000rs.</h2>
 									<p>BabySeater</p>
 									<a href="#" class="btn btn-default add-to-cart"><i
@@ -166,7 +166,7 @@
 						<div class="product-image-wrapper">
 							<div class="single-products">
 								<div class="productinfo text-center">
-									<img src="${pageContext.request.contextPath}/crm_assets/images/home/product2.jpg" alt="" />
+									<img src="${pageContext.request.contextPath}/resources/crm_assets/images/home/product2.jpg" alt="" />
 									<h2>1500rs.</h2>
 									<p>Pulmber</p>
 									<a href="#" class="btn btn-default add-to-cart"><i

@@ -7,7 +7,7 @@
 							<ul class="nav nav-pills">
 								<li><a href="#"><i class="fa fa-phone"></i> +91 95 01 88 8211</a></li>
 								<li><a href="#"><i class="fa fa-envelope"></i> info@domain.com</a></li>
-								<li><a href="#"><i class="fa fa-user"></i> Welcome |<%=session.getAttribute("Email")%></a></li>
+								<li><a href="#"><i class="fa fa-user"></i> Welcome |</a></li>
 							</ul>
 						</div>
 					</div>
@@ -32,7 +32,7 @@
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="index.html"><img src="${pageContext.request.contextPath}/crm_assets/images/home/CRMLogo.png" alt="" /></a>
+							<a href="index.html"><img src="${pageContext.request.contextPath}/resources/crm_assets/images/home/CRMLogo.png" alt="" /></a>
 						</div>
 						<div class="btn-group pull-right">
 							<div class="btn-group">

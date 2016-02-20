@@ -10,8 +10,8 @@
 		<headers disabled="true" />
 		<intercept-url pattern="/login/**" access="permitAll" />
 		<intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')" />
-		<intercept-url pattern="/servicer/**" access="permitAll" />
-		<intercept-url pattern="/visitor/**" access="permitAll"/>
+		<intercept-url pattern="/servicer/**" access="hasRole('ROLE_SERVICER')" />
+		<intercept-url pattern="/visitor/**" access="hasRole('ROLE_VISITOR')"/>
 		<form-login 
 			default-target-url="/login/loginPass" 
 			login-processing-url="/j_spring_security_check"

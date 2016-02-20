@@ -11,7 +11,7 @@
 									8211</a></li>
 							<li><a href="#"><i class="fa fa-envelope"></i>
 									info@domain.com</a></li>
-							<li><a href="#"><i class="fa fa-envelope"></i> Welcome |<%=session.getAttribute("Email")%></a></li>
+							<li><a href="#"><i class="fa fa-envelope"></i> Welcome |</a></li>
 						</ul>
 					</div>
 				</div>
@@ -38,7 +38,7 @@
 				<div class="col-sm-4">
 					<div class="logo pull-left">
 						<a href="index.html"><img
-							src="${pageContext.request.contextPath}/crm_assets/images/home/hh.png" alt="" /></a>
+							src="${pageContext.request.contextPath}/resources/crm_assets/images/home/hh.png" alt="" /></a>
 					</div>
 					<div class="btn-group pull-right">
 						<div class="btn-group">
