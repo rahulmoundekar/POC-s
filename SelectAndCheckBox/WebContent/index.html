@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+    <!-- Ignite UI Required Combined CSS Files -->
+    <link href="css/infragistics.theme.css" rel="stylesheet" />
+    <link href="css/infragistics.css" rel="stylesheet" />
+
+    <script src="js/modernizr-2.8.3.js"></script>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+
+    <!-- Ignite UI Required Combined JavaScript Files -->
+    <script src="js/infragistics.core.js"></script>
+    <script src="js/infragistics.lob.js"></script>
+
+</head>
+<body>
+    <style>        
+        .combo-label {margin-bottom:.5em;}
+    </style>
+
+    <h4 class="combo-label">Drop Down on Focus, Single Selection</h4>
+    <div id="singleSelectCombo"></div>
+
+    <h4 class="combo-label">Multiple Selection</h4>
+    <div id="multiSelectCombo"></div>
+
+    <h4 class="combo-label">Multiple Selection with Checkboxes</h4>
+    <div id="checkboxSelectCombo"></div>
+
+    <script>
+
+        var colors = [
+            { Name: "Black" },
+            { Name: "Blue" },
+            { Name: "Brown" },
+            { Name: "Green" },
+            { Name: "Orange" },
+            { Name: "Purple" },
+            { Name: "Red" },
+            { Name: "White" },
+            { Name: "Yellow" }
+        ];
+
+        $(function () {
+
+            $("#singleSelectCombo").igCombo({
+                width: "270px",
+                dataSource: colors,
+                textKey: "Name",
+                valueKey: "Name",
+                dropDownOnFocus: true
+            });
+
+            $("#multiSelectCombo").igCombo({
+                width: "270px",
+                dataSource: colors,
+                textKey: "Name",
+                valueKey: "Name",
+                multiSelection: {
+                    enabled: true
+                }
+            });
+
+            $("#checkboxSelectCombo").igCombo({
+                width: "270px",
+                dataSource: colors,
+                textKey: "Name",
+                valueKey: "Name",
+                multiSelection: {
+                    enabled: true,
+                    showCheckboxes: true
+                }
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
