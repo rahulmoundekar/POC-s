@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean" />
+
+	<bean class="org.springframework.scheduling.quartz.SchedulerAccessorBean">
+		<property name="triggers">
+			<list>
+				<ref bean="methodInvocationTrigger" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="methodInvocationTrigger"
+		class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean">
+		<property name="jobDetail" ref="methodInvocationTask" />
+		<property name="repeatInterval" value="1000" />
+		<property name="repeatCount" value="3" />
+	</bean>
+
+
+	<bean name="testBean" class="com.spring.quartz.TestBean" />
+
+	<bean id="methodInvocationTask"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="testBean" />
+		<property name="targetMethod" value="doSomething" />
+	</bean>
+
+</beans>

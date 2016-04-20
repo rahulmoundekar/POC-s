@@ -46,10 +46,13 @@ public class PieChart extends HttpServlet {
 				employee.setName(rs.getString("name"));
 				empdetails.add(employee);
 			}
+			
+			
 			Gson gson = new Gson();
 			System.out.println(gson.toJson(empdetails));
 			String messages = gson.toJson(empdetails);
 			out.println("{\"Messages\":" + messages + "}");
+	
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {

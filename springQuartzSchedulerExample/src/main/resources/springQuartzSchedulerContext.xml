@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean name="someJob"
+		class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+		<property name="jobClass" value="com.spring.quartz.MyJob" />
+		<property name="jobDataAsMap">
+			<map>
+				<entry key="jobState" value-ref="jobDataBean" />
+				<entry key="jobLatch" value-ref="jobLatch" />
+			</map>
+		</property>
+	</bean>
+
+	<bean name="jobLatch" class="com.spring.quartz.SpringQuartzSchedulerExample" />
+
+	<bean name="jobDataBean" class="com.spring.quartz.MyJobHelper">
+		<constructor-arg index="0">
+			<value>Spring Quartz Example</value>
+		</constructor-arg>
+	</bean>
+
+	<bean id="jobTrigger"
+		class="org.springframework.scheduling.quartz.SimpleTriggerFactoryBean">
+		<property name="repeatInterval" value="1000" />
+		<property name="repeatCount" value="3" />
+		<property name="jobDetail" ref="someJob" />
+	</bean>
+
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="jobTrigger" />
+				<ref bean="cronTrigger" />
+			</list>
+		</property>
+	</bean>
+
+</beans>
